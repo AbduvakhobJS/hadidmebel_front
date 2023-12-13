@@ -15,27 +15,27 @@ function Main({setProduct}) {
 
 
     const getId = async (id) => {
-        const { data } = await axios.post(`http://165.232.70.6:7000/api/catalog/find`, {
+        const { data } = await axios.post(`http://164.92.137.14:7000/api/catalog/find`, {
             catalog_Id: id
         })
         setProduct(data ? data : [])
     }
 
     const CatalogFetch = async () => {
-        const { data } = await axios.get(`http://165.232.70.6:7000/api/catalog/all`)
+        const { data } = await axios.get(`http://164.92.137.14:7000/api/catalog/all`)
         setCatalog(data)
     }
 
 
     const fetch_promotion_date = async () => {
-        const { data } = await axios.get(`http://165.232.70.6:7000/api/promotion_date/all`)
+        const { data } = await axios.get(`http://164.92.137.14:7000/api/promotion_date/all`)
         setDatePromotion(data)
     }
 
 
     const PromotionFetch = async () => {
         setIsLoading(false)
-        const {data} = await axios.get(`http://165.232.70.6:7000/api/promotion/all`)
+        const {data} = await axios.get(`http://164.92.137.14:7000/api/promotion/all`)
         console.log(data)
         setPromotion(data)
         setIsLoading(true)
@@ -43,14 +43,14 @@ function Main({setProduct}) {
 
 
     const getOnePromotion = async (id) => {
-        const { data } = await axios.get(`http://165.232.70.6:7000/api/promotion/${id}`)
+        const { data } = await axios.get(`http://164.92.137.14:7000/api/promotion/${id}`)
         setOnePromotion(data)
     }
     const getPromotion = {name: OnePromotion.title, id: OnePromotion._id}
 
     const addPromotion = async (e) => {
         e.preventDefault()
-        await axios.post(`http://165.232.70.6:7000/api/order/create`, {
+        await axios.post(`http://164.92.137.14:7000/api/order/create`, {
             product_Id: getPromotion.id,
             product_name: getPromotion.name,
             name: name,
@@ -120,7 +120,7 @@ function Main({setProduct}) {
                             <div key={item._id} className="col">
                                 <Link onClick={() => getId(item._id)} className={"nav-link"} to={`/${item.name}`}>
                                     <div className="card text-bg-dark shadow rounded-0" style={{maxWidth: "400px"}}>
-                                        <img src={`http://165.232.70.6:7000/catalogs/${item.image}`}
+                                        <img src={`http://164.92.137.14:7000/catalogs/${item.image}`}
                                              style={{maxHeight: "277px"}} className="card-img-top rounded-0" alt="..."/>
                                         <div className="card-body">
                                             <div className={"container"}>
@@ -204,7 +204,7 @@ function Main({setProduct}) {
                                 <div className="col">
                                     <div key={item._id} className="card shadow-lg border-dark rounded-0"
                                          style={{width: "18rem"}}>
-                                        <img src={`http://165.232.70.6:7000/promotions/${item.image}`}
+                                        <img src={`http://164.92.137.14:7000/promotions/${item.image}`}
                                              className="card-img-top rounded-0" style={{height: "300px"}} alt="..."/>
                                         <div className="card-body text-bg-dark">
                                             <h5 className="card-title">{item.title}</h5>
