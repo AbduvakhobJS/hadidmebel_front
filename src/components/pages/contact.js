@@ -24,12 +24,12 @@ function Contact() {
                 <div className={" row d-inline h-100 w-100"}>
                     <div className={"col  h-25"}>
                         <p className={"mt-3"} style={{fontSize: "13px"}}>Manzil
-                            <h6 className={"mt-1"}>Toshkent Sh. Uchtepa T. Orikzor 23</h6>
+                            <h6 className={"mt-1"}>Toshkent Sh. Uchtepa T. Orikzor Mahalla</h6>
                         </p>
                     </div>
                     <div className={"col h-25"}>
                         <p className={"mt-1" } style={{fontSize: "13px"}}>Moljal
-                            <h6 className={"mt-1"}>Orikzor Kanali</h6>
+                            <h6 className={"mt-1"}>Karvon bozori </h6>
                         </p>
                     </div>
                     <div className={"col  h-25"}>
@@ -41,7 +41,7 @@ function Contact() {
                     </div>
                     <div className={"col  h-25"}>
                         <p className={""} style={{fontSize: "13px"}}>Ish-vaqti
-                            <h6 className={"mt-1"}>9:00 20:00</h6>
+                            <h6 className={"mt-1"}>9:00 18:00</h6>
                         </p>
                     </div>
                 </div>
