@@ -6,7 +6,7 @@ function Material() {
     const [isLoading, setIsLoading] = useState(false)
     const fetchData = async () => {
         setIsLoading(false)
-        const {data} = await axios.get('http://165.232.70.6:7000/api/material/all')
+        const {data} = await axios.get('http://164.92.137.14:7000/api/material/all')
         console.log(data)
         setMaterials(data)
         setIsLoading(true)
@@ -34,7 +34,7 @@ function Material() {
                         return (
                             <div className="col">
                                 <div className="card h-100 border-dark">
-                                    <img src={`http://165.232.70.6:7000/materials/${item.image}`} className="card-img-top" alt="..."/>
+                                    <img src={`http://164.92.137.14:7000/materials/${item.image}`} className="card-img-top" alt="..."/>
                                     <div className="card-body text-bg-dark shadow">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text">{item.description}</p>
