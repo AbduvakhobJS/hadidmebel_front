@@ -10,12 +10,12 @@ function Navbar({setProduct}) {
     const [isLoading, setIsLoading] = useState(false)
 
     const fetchData = async () => {
-        const { data } = await axios.get("http://165.232.70.6:7000/api/catalog/all")
+        const { data } = await axios.get("http://164.92.137.14:7000/api/catalog/all")
         setCatalogs(data)
     }
 
     const getId = async (id) => {
-        const { data } = await axios.post(`http://165.232.70.6:7000/api/catalog/find`,{
+        const { data } = await axios.post(`http://164.92.137.14:7000/api/catalog/find`,{
             catalog_Id: id
         })
         setProduct(data? data:[])
