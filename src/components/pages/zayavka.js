@@ -9,11 +9,11 @@ function Zayavka() {
     const navigate = useNavigate()
     const addZayavka = async (e) => {
         e.preventDefault()
-        if(name === "" || surename === "" || phone === ""){
+        if(name === "" || phone === ""){
             alert("Malumotni toliq kiriting")
         }
         else {
-            await axios.post(`http://165.232.70.6:7000/api/zayavka/create`,{
+            await axios.post(`http://164.92.137.14:7000/api/zayavka/create`,{
                 name: name,
                 surename: surename,
                 phone: phone
