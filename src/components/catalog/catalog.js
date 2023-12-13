@@ -12,7 +12,7 @@ function Catalog({item, product}) {
                         {product && product.map((productById, index) => (
                             <div key={index} className="col">
                                 <div className="card h-100 border-dark rounded-0">
-                                    <img src={`http://165.232.70.6:7000/products/${productById.image}`}
+                                    <img src={`http://164.92.137.14:7000/products/${productById.image}`}
                                          className="card-img-top rounded-0" alt="Mahsulot rasmi"/>
                                     <div className="card-body text-bg-dark shadow">
                                         <h5 className="card-title">{productById.title}</h5>
