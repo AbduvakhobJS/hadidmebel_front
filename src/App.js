@@ -18,7 +18,7 @@ function App() {
     const [catalog, setCatalog] = useState([])
 
     const fetchCatalog = async () => {
-        const { data } = await axios.get(`http://165.232.70.6:7000/api/catalog/all`)
+        const { data } = await axios.get(`http://164.92.137.14:7000/api/catalog/all`)
         setCatalog(data)
     }
     useEffect(() => {
