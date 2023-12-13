@@ -11,13 +11,13 @@ function Product() {
     const [isLoading, setIsLoading] = useState(false)
     const fetchByid = async () => {
         setIsLoading(false)
-        const { data } = await axios.get(`http://165.232.70.6:7000/api/product/${id}`)
+        const { data } = await axios.get(`http://164.92.137.14:7000/api/product/${id}`)
         const elements = {
             title: data.title,
             pagonametr: data.pagonametr,
             staleshnitsa: data.staleshnitsa,
             material: data.material,
-            image: `http://165.232.70.6:7000/products/${data.image[0]}`,
+            image: `http://164.92.137.14:7000/products/${data.image[0]}`,
             fasad: data.fasad,
             description: data.description,
             catalog_name: data.catalog_name,
@@ -35,7 +35,7 @@ function Product() {
             alert("Malumotni toliq kiriting")
         }
         else{
-            await axios.post(`http://165.232.70.6:7000/api/order/create`,{
+            await axios.post(`http://164.92.137.14:7000/api/order/create`,{
                 name: name,
                 phone: phone,
                 product_Id: product.id,
